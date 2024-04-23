@@ -4,7 +4,7 @@ require("./config/database"); //this is asynchronous that's why you will notice 
 
 const moviesRouter = require("./routes/movies");
 
-const port = process.env.PORT;
+const port = process.env.PORT || 4050;
 const app = express();
 
 app.use(express.json()); //in this mongoose context, you need to include this to process the data in the body if it's json for your controller.
