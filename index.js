@@ -11,6 +11,10 @@ app.use(express.json()); //in this mongoose context, you need to include this to
 
 app.use("/api/movies", moviesRouter);
 
+app.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
 app.listen(port, () => {
   console.log(`Listening to port : ${port}`);
 });
